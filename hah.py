@@ -58,7 +58,8 @@ def round_img():
         sameNum = max_same_num(saveimg)
         if sameNum >= 80:
             uid = i[i.index("_1")+1:i.index("_1")+8]
-            if uid not in myId and uid >1900000:
+            int_uid = int(uid)
+            if uid not in myId and int_uid >1900000:
                 myImgUrlData.killOneNode(idarr(uid)[0])
                 myImgUrlData.forbidden(uid)
                 print ("相识删除%suid%s"%(sameNum,uid))
