@@ -70,8 +70,9 @@ def round_img():
             #这里是正则匹配
             if match:
                 uid = i[i.index("_")+1:i.index("_")+8]
+                int_uid = int(uid)
                 #myImgUrlData.killOneNode(idarr(uid)[0])
-                if uid not in myId and uid >1900000:
+                if uid not in myId and int_uid >1900000:
                     myImgUrlData.forbidden(uid)
                     killAllNode(idarr(uid))
                     print ("============================================================")
